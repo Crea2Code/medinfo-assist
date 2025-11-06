@@ -2,38 +2,157 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tes styles personnalisés ensuite */
-html, body {
-  scroll-behavior: smooth;
+/* 🌿 Palette médicale harmonisée */
+:root {
+  --color-primary: #2563eb; /* Bleu médical principal */
+  --color-secondary: #10b981; /* Vert apaisant / santé */
+  --color-bg: #f9fafb; /* Fond doux */
+  --color-text: #1f2937; /* Gris foncé lisible */
+  --color-border: #e5e7eb; /* Gris clair */
 }
 
-section {
-  transition: all 0.3s ease-in-out;
+/* 🩺 Typographie générale */
+body {
+  @apply bg-[var(--color-bg)] text-[var(--color-text)] font-sans leading-relaxed antialiased;
 }
 
-textarea {
-  margin-bottom: 1rem;
+/* 🌐 Liens */
+a {
+  @apply text-[var(--color-primary)] hover:text-blue-700 transition-colors;
 }
 
-button {
-  margin-top: 0.5rem;
+/* 🧠 Titres principaux */
+h1, h2, h3, h4 {
+  @apply font-semibold text-gray-800;
 }
 
+h1 {
+  @apply text-3xl mb-4 text-[var(--color-primary)];
+}
+
+h2 {
+  @apply text-2xl mt-4 mb-2 text-[var(--color-primary)];
+}
+
+h3 {
+  @apply text-xl mt-3 mb-2 text-[var(--color-secondary)];
+}
+
+/* 🪶 Paragraphes et listes Markdown */
+.prose {
+  @apply text-gray-800 leading-relaxed;
+}
+
+.prose p {
+  @apply mb-3;
+}
+
+.prose ul {
+  @apply list-disc pl-6 mb-4 text-gray-700;
+}
+
+.prose li {
+  @apply mb-1;
+}
+
+.prose strong {
+  @apply text-[var(--color-primary)];
+}
+
+/* 💬 Encadré “Conseil Santé” & “Résultat” */
+.advice-box, .result-box {
+  @apply bg-white rounded-xl shadow-md border border-[var(--color-border)] p-6 mt-8 transition-all;
+}
+
+.advice-box:hover, .result-box:hover {
+  @apply shadow-lg border-[var(--color-secondary)];
+}
+
+/* 💡 Zone d’introduction */
+.intro-section {
+  @apply text-center mt-10 px-6;
+}
+
+.intro-section h2 {
+  @apply text-2xl font-semibold text-gray-800 mb-2;
+}
+
+.intro-section p {
+  @apply text-gray-600 max-w-2xl mx-auto mb-6 leading-relaxed;
+}
+
+/* 🔘 Boutons */
+.btn-primary {
+  @apply bg-[var(--color-primary)] hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition;
+}
+
+.btn-secondary {
+  @apply bg-[var(--color-secondary)] hover:bg-emerald-700 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition;
+}
+
+.btn-disabled {
+  @apply opacity-60 cursor-not-allowed;
+}
+
+/* 🕊️ Footer */
 footer {
-  background: linear-gradient(to bottom, #f9fafb, #f3f4f6);
+  @apply text-center py-6 text-gray-500 text-sm border-t border-[var(--color-border)];
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
+/* ⚕️ Bandeau d’avertissement */
+.health-disclaimer {
+  @apply mt-4 p-3 rounded-md bg-blue-50 border border-blue-200 text-sm text-blue-800;
+}
+
+/* 🩺 Loader animation */
+.loader {
+  @apply flex items-center justify-center mt-6;
+}
+
+.loader-dot {
+  @apply w-3 h-3 bg-[var(--color-primary)] rounded-full mx-1 animate-bounce;
+}
+.loader-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loader-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* 📱 Responsive */
+@media (max-width: 640px) {
+  .intro-section h2 {
+    @apply text-xl;
   }
-  to {
+  .btn-primary, .btn-secondary {
+    @apply w-full;
+  }
+}
+/* ✨ Animation du logo et des éléments de chargement */
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-in-out both;
+}
+
+.animate-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
   }
 }
-
-.animate-fadeIn {
-  animation: fadeIn 0.4s ease-in-out;
+/* ✨ Effet global de transition de l’écran d’accueil */
+.transition-opacity {
+  transition: opacity 0.6s ease-in-out;
 }
