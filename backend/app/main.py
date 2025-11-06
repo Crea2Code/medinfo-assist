@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from dotenv import load_dotenv
-import os
+import os, requests
 from groq import Groq
 
 # Charger les variables d'environnement
@@ -59,6 +59,48 @@ async def analyze_text(request: TextRequest):
 
     except Exception as e:
         return {"error": f"Erreur Groq : {str(e)}"}
+    
+# 🔹 Modèle de données pour l’entrée utilisateur
+class HealthAdviceRequest(BaseModel):
+    question: str    
+    
+# 🔹 Endpoint pour demander un conseil santé
+@app.post("/advice")
+async def get_health_advice(request: HealthAdviceRequest):
+    question = request.question
+    prompt = (
+        f"Donne un conseil de prévention santé clair et bienveillant pour la question suivante : "
+        f"{question}. Utilise un ton simple et empathique, accessible à tous."
+    )
+
+    try:
+        # Exemple avec Groq ou tout modèle compatible OpenAI
+        GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+        MODEL_ID = "llama-3.1-8b-instant"
+
+        response = requests.post(
+            "https://api.groq.com/openai/v1/chat/completions",
+            headers={
+                "Authorization": f"Bearer {GROQ_API_KEY}",
+                "Content-Type": "application/json",
+            },
+            json={
+                "model": MODEL_ID,
+                "messages": [{"role": "user", "content": prompt}],
+            },
+            timeout=60,
+        )
+        data = response.json()
+        text = data["choices"][0]["message"]["content"]
+
+        return {
+            "question": question,
+            "advice": text,
+            "model_used": MODEL_ID,
+        }
+
+    except Exception as e:
+        return {"error": f"Erreur Groq : {e}"}
 
 # Route de test
 @app.get("/")
