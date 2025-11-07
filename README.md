@@ -14,6 +14,9 @@ MedInfo Assist
 </p>
 
 <p align="center">
+  <a href="https://crea2code.github.io/medinfo-assist/" target="_blank">
+    <img src="https://img.shields.io/badge/🚀%20Live%20Demo-MedInfo%20Assist-2563EB?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo">
+  </a>
   <img src="https://img.shields.io/badge/Next.js-14.0.0-black?logo=nextdotjs" alt="Next.js" />
   <img src="https://img.shields.io/badge/FastAPI-Backend-success?logo=fastapi" alt="FastAPI" />
   <img src="https://img.shields.io/badge/TailwindCSS-Design-38B2AC?logo=tailwindcss" alt="TailwindCSS" />
