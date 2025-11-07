@@ -75,7 +75,6 @@ Logo **BrainCircuit 🧠** : symbole de la synergie entre l’intelligence humai
 
 ### ⚙️ Backend – FastAPI
 
-```bash
 cd backend
 python -m venv venv
 venv\Scripts\activate
@@ -128,4 +127,4 @@ Ce projet a été conçu dans un contexte d’apprentissage professionnel pour d
 Projet distribué sous licence MIT
 © 2025 – Crea2Code | Sonia Chalal
 
-<p align="center"> <img src="https://img.shields.io/badge/Version-2.0-blue?style=for-the-badge" /> </p> ```
+<p align="center"> <img src="https://img.shields.io/badge/Version-2.0-blue?style=for-the-badge" /> </p> 
