@@ -5,7 +5,6 @@ const nextConfig = {
   images: { unoptimized: true }, // 🖼️ évite les erreurs d'optimisation
   trailingSlash: true,           // 🔗 compatibilité GitHub Pages
   reactStrictMode: false,        // ✅ évite les warnings React 19
-  serverExternalPackages: ["lucide-react"], // 🔄 nouvelle syntaxe officielle
   compiler: {
     removeConsole: false,
   },
