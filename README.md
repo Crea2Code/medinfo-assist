@@ -90,21 +90,21 @@ npm run dev
 
 🌐 Application locale : http://localhost:3000
 
-🧠 Fonctionnalités principales
+## 🧠 Fonctionnalités principales
 
-🩺 Analyse IA des textes médicaux
+- 🩺 Analyse IA des textes médicaux
 
-💡 Conseils santé personnalisés
+- 💡 Conseils santé personnalisés
 
-🧾 Affichage en Markdown clair et structuré
+- 🧾 Affichage en Markdown clair et structuré
 
-⚙️ Connexion directe Next.js ↔ FastAPI
+- ⚙️ Connexion directe Next.js ↔ FastAPI
 
-🎬 Animation d’accueil (splash + son)
+- 🎬 Animation d’accueil (splash + son)
 
-⚕️ Encadré informatif — “Ce texte est une vulgarisation à but informatif”
+- ⚕️ Encadré informatif — “Ce texte est une vulgarisation à but informatif”
 
-🌍 Déploiement
+## 🌍 Déploiement
 
 Frontend déployé via GitHub Pages
 Backend hébergé via Render ou Railway
@@ -112,7 +112,7 @@ Backend hébergé via Render ou Railway
 Lien public :
 🔗 https://crea2code.github.io/medinfo-assist
 
-🖋️ Auteur
+## 🖋️ Auteur
 
 👩‍💻 Sonia Chalal
 Développeuse Full Stack & Fondatrice de Crea2Code.fr
@@ -122,7 +122,7 @@ Développeuse Full Stack & Fondatrice de Crea2Code.fr
 
 Ce projet a été conçu dans un contexte d’apprentissage professionnel pour démontrer des compétences avancées en intégration IA & web full stack.
 
-⚖️ Licence
+## ⚖️ Licence
 
 Projet distribué sous licence MIT
 © 2025 – Crea2Code | Sonia Chalal
