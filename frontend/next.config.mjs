@@ -2,12 +2,18 @@
 const nextConfig = {
   output: "export",              // 📦 génération statique
   basePath: "/medinfo-assist",   // 📍 chemin GitHub Pages
-  images: { unoptimized: true }, // 🖼️ évite les erreurs d'optimisation
-  trailingSlash: true,           // 🔗 compatibilité GitHub Pages
-  reactStrictMode: false,        // ✅ évite les warnings React 19
-  compiler: {
-    removeConsole: false,
+  images: { unoptimized: true },
+  trailingSlash: true,
+  reactStrictMode: false,
+  compiler: { removeConsole: false },
+
+  // 🧩 Ajoute ceci :
+  experimental: {
+    turbo: {
+      rules: {},
+    },
   },
+  distDir: "out", // 👈 ajoute cette ligne !
 };
 
 export default nextConfig;
