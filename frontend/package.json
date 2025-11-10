@@ -1,15 +1,15 @@
 {
   "name": "frontend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "homepage": "https://crea2code.github.io/medinfo-assist",
   "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "eslint",
-  "predeploy": "npm run build; npx next export; if (-Not (Test-Path 'out')) { New-Item -ItemType Directory -Path 'out' | Out-Null }; echo '' > out/.nojekyll; if (Test-Path 'out/index.html') { Copy-Item 'out/index.html' 'out/404.html' -Force }",
-  "deploy": "gh-pages -d out"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "predeploy": "npm run build && node scripts/predeploy.js",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "lucide-react": "^0.548.0",
