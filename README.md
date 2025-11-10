@@ -107,7 +107,8 @@ npm run dev
 
 - ⚕️ Encadré informatif — “Ce texte est une vulgarisation à but informatif”
 
-## 🌍 Déploiement
+## 🌍 Déploiement continu
+Ce projet est automatiquement déployé sur [Vercel](https://vercel.com) à chaque `git push` sur la branche `main`.
 
 🩺 **Version en ligne**  
 👉 [https://medinfo-assist.vercel.app](https://medinfo-assist.vercel.app)
