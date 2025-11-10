@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "predeploy": "npm run build && mkdir -p out && echo > out/.nojekyll && cp out/index.html out/404.html",
+    "predeploy": "npm run build && if (!(Test-Path 'out')) { New-Item -ItemType Directory -Path 'out' } ; echo > out/.nojekyll ; Copy-Item 'out/index.html' 'out/404.html' -Force",
     "deploy": "gh-pages -d out"
   },
   "dependencies": {
