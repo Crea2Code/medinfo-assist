@@ -109,11 +109,8 @@ npm run dev
 
 ## 🌍 Déploiement
 
-Frontend déployé via GitHub Pages
-Backend hébergé via Render ou Railway
-
-Lien public :
-🔗 https://crea2code.github.io/medinfo-assist
+🩺 **Version en ligne**  
+👉 [https://medinfo-assist.vercel.app](https://medinfo-assist.vercel.app)
 
 ## 🖋️ Auteur
 
