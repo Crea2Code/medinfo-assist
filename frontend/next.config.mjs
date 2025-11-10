@@ -1,35 +1,14 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NEXT_PUBLIC_DEPLOY_ENV === 'production';
+
 const nextConfig = {
-  // 📦 Génération statique pour GitHub Pages
-  output: "export",
-
-  // 🗂️ Base du projet (important pour GitHub Pages)
-  basePath: "/medinfo-assist",
-
-  // 🌐 Images et liens optimisés pour l’export
-  images: {
-    unoptimized: true
-  },
-
-  // 🔗 Compatibilité pour les chemins statiques
+  output: isProd ? "export" : undefined,
+  basePath: isProd ? "/medinfo-assist" : "",
+  assetPrefix: isProd ? "/medinfo-assist/" : "",
+  images: { unoptimized: true },
   trailingSlash: true,
-
-  // ✅ Désactive certains checks React 19
   reactStrictMode: false,
-
-  // 🧩 Réduit les risques d’erreurs avec Turbopack
-  compiler: {
-    removeConsole: false
-  },
-
-  // 🚫 Supprime les anciennes clés expérimentales non supportées
-  eslint: {
-    ignoreDuringBuilds: true
-  },
-
-  typescript: {
-    ignoreBuildErrors: true
-  }
+  compiler: { removeConsole: false },
 };
 
 export default nextConfig;
