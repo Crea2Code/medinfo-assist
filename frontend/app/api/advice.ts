@@ -1,16 +1,21 @@
 // frontend/app/api/advice.ts
-export async function getHealthAdvice(question: string) {
+const API_BASE =
+  process.env.NEXT_PUBLIC_API_BASE ??
+  (process.env.NODE_ENV === "production"
+    ? "https://medinfo-assist-backend.onrender.com"
+    : "http://127.0.0.1:8000");
+
+export async function getHealthAdvice(text: string) {
   try {
-    const response = await fetch("http://127.0.0.1:8000/advice", {
+    const res = await fetch(`${API_BASE}/advice`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question }),
+      body: JSON.stringify({ text }),
     });
-
-    if (!response.ok) throw new Error("Erreur réseau");
-    return await response.json();
-  } catch (error) {
-    console.error("Erreur API :", error);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return await res.json();
+  } catch (e) {
+    console.error("Erreur lors de la requête backend:", e);
     return { error: "Impossible d’obtenir un conseil pour le moment." };
   }
 }
