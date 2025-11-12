@@ -10,7 +10,7 @@ export async function getHealthAdvice(text: string) {
     const res = await fetch(`${API_BASE}/advice`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text }),
+      body: JSON.stringify({ question: text }),
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.json();
