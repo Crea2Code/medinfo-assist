@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./frontend/public/Bannière-MedInfo-Assist-pour-Forum-Santé-2025.png" alt="Crea2code MedInfo Assist banner" width="100%" />
+  <img src="./frontend/public/medinfo-banner.png" alt="Crea2code MedInfo Assist banner" width="100%" />
 </p>
 
 <h1 align="center">
@@ -143,18 +143,19 @@ Ce projet est automatiquement déployé à chaque git push :
 
 ## 🖋️ Auteur
 
-👩‍💻 **Sonia Chalal**
+👩‍💻 **Sonia Chalal**  
+Fondatrice de **Crea2Code – Agence Digitale & Formations**  
+💬 Passionnée par la pédagogie numérique, l’IA et la santé connectée.  
+📍 Rouen, France  
+🔗 [LinkedIn](https://www.linkedin.com/in/sonia-chalal/)  
 
-**Fondatrice de Crea2Code**```bash
- – Agence Digitale & Formations
-💬 Passionnée par la pédagogie numérique, l’IA et la santé connectée.
-📍 Rouen, France
-🔗 LinkedIn
-```
-⚖️ Licence
+---
 
-Projet distribué sous licence MIT
-© 2025 – Crea2Code | Sonia Chalal
+## ⚖️ Licence
 
-<p align="center"> <img src="https://img.shields.io/badge/Version-2.1-blue?style=for-the-badge" /> </p>
+Projet distribué sous licence **MIT**  
+© 2025 – **Crea2Code | Sonia Chalal**
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Version-2.1-blue?style=for-the-badge" />
+</p>
